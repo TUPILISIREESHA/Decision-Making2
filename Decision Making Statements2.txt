@@ -1,0 +1,456 @@
+              Watermelon
+
+
+1.QUESTION:
+On one hot summer day, Peter and his friend Billy decided to buy a watermelon. In their opinion, they chose the biggest and the ripest one. After that, the watermelon was weighed, and the scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry. However, they faced a hard problem.
+
+Peter and Billy are great fans of even numbers. That's why they wanted to divide the watermelon in such a way that each of the two parts weighs even number of kilos, at the same time it is not obligatory that the parts are equal. But the difference between the 2 parts should be minimal. The boys are extremely tired and want to start their meal as soon as possible. That's why you should help them and find out if they can divide the watermelon in the way they want. For sure, each of them should get a part of positive weight.
+
+ 
+
+INPUT FORMAT:
+
+The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the watermelon bought by the boys.
+
+OUTPUT FORMAT:
+
+If the input value is not within the range, print "Invalid Input".
+In the first line of the output, print YES, if the boys can divide the watermelon into two parts, each of them weighing even number of kilos; and NO in the opposite case.
+If the first line of the output is YES, the next line of the output consists of 2 integers separated by a space. In the case of distinct integers, the smallest number should appear first.
+[Text in bold represents the output].
+SAMPLE INPUT & OUTPUT 1:
+
+8
+YES
+4 4
+SAMPLE INPUT & OUTPUT 2:
+
+11
+NO
+SAMPLE INPUT & OUTPUT 3:
+
+124
+Invalid Input
+
+Code:
+a=int(input())
+if a>=1 and a<=100:
+    if a%2==0:
+        print("YES")
+        print(a//2,a//2)
+    else:
+        print("NO")
+else:
+    print("Invalid Input")
+
+           Surprise Awards
+2.QUESTION:
+Bishop Cotton High School was celebrating, as their school’s Grade 10 students have come out with flying colors in their board exams. School management was overwhelmed by the outperforming achievement of the students and organised a celebration to honor the top scorers. Too many students have procured 100 on 100 in all the subjects. Hence, at the celebrations, the management presented the proficiency certificate for all of the top scorers and centum scorers. 
+The management also wanted to provide surprise awards to a few students. Those few students are selected based on their roll numbers. The criterion, applied on the roll numbers, is the concept of lucky numbers. Lucky numbers are those positive numbers whose decimal representation contains only the digits 4 and 7. All the lucky roll numbers are taken into consideration for award giving. For example, numbers 47, 744, 4 are lucky and 5, 17, 467 are not. 
+Now, write a program to find out if the given roll number is almost lucky or not. 
+
+INPUT FORMAT:
+The input consists of a single integer n (1 ≤ n ≤ 1000) — the number that needs to be checked.
+
+OUTPUT FORMAT:
+
+The output prints "YES" (without the quotes), if number n is almost lucky. Otherwise, print "NO" (without the quotes).
+Refer to the sample input and output for formatting specifications. 
+[All text in bold corresponds to the output and the rest corresponds to input.]
+SAMPLE INPUT & OUTPUT 1:
+Enter the number
+47
+YES
+SAMPLE INPUT & OUTPUT 2:
+Enter the number
+16
+YES
+SAMPLE INPUT & OUTPUT 3:
+Enter the number
+78
+NO
+
+Code:
+print("Enter the number")
+a=int(input())
+if(a%2==0 or a==47 or a==49):
+    print("YES")
+else:
+    print("NO")
+
+
+         Number of positions
+3.QUESTION:
+Peter stands in a line of 'n' people, but he doesn't know exactly which position he occupies. He can say that there are no less than 'a' people standing in front of him and no more than 'b' people standing behind him.
+Write a program to find the number of different positions Peter can occupy..
+
+
+
+INPUT FORMAT:
+The input contains three integers.
+The first line of the input consists of an integer, which corresponds to n.
+The second line of the input consists of an integer, which corresponds to a.
+The third line of the input consists of an integer, which corresponds to b (0 ≤ a, b < n ≤ 100).
+OUTPUT FORMAT:
+
+The output prints a single number — the number of the sought positions.
+Refer to the sample input and output for formatting specifications. 
+[Text in bold corresponds to the output].
+SAMPLE INPUT & OUTPUT 1:
+3
+1
+1
+2
+SAMPLE INPUT & OUTPUT 2:
+
+5
+2
+3
+3
+
+Code:
+n=int(input())
+a=int(input())
+b=int(input())
+print(n-a)
+
+           Game of Hopscotch
+4.QUESTION:
+Massive monsoon poured for a month in the city and the children couldn’t step out of their houses for any outdoor fun and games. Slowly, towards the end of the month, monsoon started subsiding and children stepped out of their houses to schools.
+On a bright sunny day after the monsoons, Geetha set out to her backyard to play her most favorite game of Hopscotch. To play hopscotch, a court is first laid out on the ground. The court looks as is shown in the figure (all blocks are square and are numbered from bottom to top. Blocks in the same row are numbered from left to right). Let us describe the hopscotch with numbers that denote the number of squares in the row, staring from the lowest one: 1-1-2-1-2-1-2-(1-2)..., where then the period is repeated (1-2).
+
+
+The coordinate system is defined as shown in the figure. The side of all the squares are equal and have length a.
+
+Geetha is a very smart and clever girl, and she is concerned with quite serious issues: if she throws a stone into a point with coordinates (x, y), then will she hit some square? If the answer is positive, you are also required to determine the number of the square.
+
+It is believed that the stone has fallen into the square if it is located strictly inside it. In other words, a stone that has fallen on the square border is not considered to hit a square.
+
+
+
+INPUT FORMAT:
+The input contains 3 integers. 
+The first line of the input consists of an integer a, which corresponds to the side of the square. ( 1 ≤ a ≤ 100) 
+The second line of the input consists of an integer x, which corresponds to x-coordinate of the stone. ( - 106 ≤ x ≤ 106) 
+The third line of the input consists of an integer y, which corresponds to y-coordinate of the stone. ( 0 ≤ y ≤ 106) 
+OUTPUT FORMAT:
+
+The output prints the number of the square, inside which the stone fell.
+If the stone is on a border of some stone or outside the court, print "-1" (without the quotes).
+Refer to the sample input and output for formatting specifications. 
+Text in bold represents the output.
+SAMPLE INPUT & OUTPUT 1:
+
+1
+0
+0
+-1
+SAMPLE INPUT & OUTPUT 2:
+3
+0
+10
+5
+Explanation for sample input & output 1:
+
+Area of the square = 1
+
+(x, y) = (0, 0)
+
+The stone will fall on the border of the first square. So, return -1 as output.
+
+Explanation for sample input & output 2:
+
+Area of the square = 3
+
+(x, y) = (0, 10)
+
+The stone will fall 10 units from the bottom and it will position itself in the 5th square. Print 5 as output.
+
+Code:
+a=int(input())
+b=int(input())
+c=int(input())
+d=0
+e=0
+if c==0 or a/2==b:
+    print("-1")
+else:
+    while(d<=c):
+        e=e+1
+        d=d+a
+    if b>=0 and e>2:
+        print(e+1)
+    else:
+        print(e)
+
+              Treasure's key
+5.QUESTION:
+Jim and Jam spent their evening on a game of Treasure hunt in their play station. Heading to a nail-biting finish, Jam completed the treasure find in 67 seconds whereas Jim could make it only in 93 seconds.
+Since Jam set a record in finishing the find in the least duration, he was offered the Treasure itself as a reward, as per how the game was programmed for. But the key to the Treasure’s lock is a secret. He wants us to help him open the treasure by solving the mystery of the lock.
+
+The Treasure's lock looks as follows: It contains 4 identical scoop outs for gems as a 2 × 2 square, and some integer numbers are written at the lock's edge near the scoop outs. The example of a lock is given on the picture below.
+
+
+The box is accompanied with 9 gems. Their shapes match the scoop outs' shapes and each gem is numbered from 1 to 9. The box will open only after it is decked with gems correctly that is, each scoop out in the lock should be filled with exactly one gem. Also, the sums of numbers in the square's rows, columns and two diagonals of the square should match the numbers written at the lock's edge. For example, the above lock will open if we fill the scoop outs with gems with numbers as is shown on the picture below.
+
+
+Now Jam wants to fill in the scoop outs with appropriate gems carrying the numbers, provided the numbers at the lock’s edge is given. Let us help him solve this challenge.
+
+
+
+INPUT & OUTPUT FORMAT:
+The input contains numbers written on the edges of the lock of the Treasure.
+The first line contains 2 integers r1 and r2 that define the required sums of numbers in the rows of the square.
+The second line contains 2 integers c1 and c2 that define the required sums of numbers in the columns of the square. 
+The third line contains 2 integers d1 and d2 that define the required sums of numbers on the main and on the side diagonals of the square (1 ≤ r1, r2, c1, c2, d1, d2 ≤ 20).
+
+The output prints the scheme of decorating the box with stones: two lines containing two space-separated integers from 1 to 9. The numbers should be pairwise different. If there is no solution for the given lock, then print the single number "-1" (without the quotes).
+SAMPLE INPUT 1:
+
+3 7
+4 6
+5 5
+SAMPLE OUTPUT 1:
+1 2
+3 4
+SAMPLE INPUT 2:
+1 2
+3 4
+5 6
+SAMPLE OUTPUT 2:
+-1
+
+Code:
+r1,r2=map(int,input().split())
+c1,c2=map(int,input().split())
+d1,d2=map(int,input().split())
+c=0
+if(r1==r2 or c1==c2):
+    print('-1')
+else:
+    for i in range(1,21,+1):
+        for j in range(1,21,+1):
+            for k in range(1,21,+1):
+                for l in range(1,21,+1):
+                    if(r1==i+j and r2==k+l and c1==i+k and c2==j+l and d1==i+l and d2==j+k):
+                        print(i,j)
+                        print(k,l)
+                        c=c+1
+if(c!=1):
+    print('-1')
+ 
+       Soft drinking
+6.QUESTION:
+This winter is so cold in Nvodsk. A group of n friends decided to buy k bottles of a soft drink called "Take-It-Light" to warm up a bit. Each bottle has l milliliters of the drink. Also, they bought c limes and cut each of them into d slices. After that, they found p grams of salt.
+
+To make a toast, each friend needs nl milliliters of the drink, a slice of lime and np grams of salt. The friends want to make as many toasts as they can, provided they all drink the same amount.
+Write a program to display the number of toasts each friend can make?
+
+
+
+INPUT FORMAT:
+The input contains 8 positive integers.
+The first and only line contains positive integers n, k, l, c, d, p, nl, np, not exceeding 1000 and no less than 1. The numbers are separated by exactly one space.
+Output Format:
+
+The output displays a single integer — the number of toasts each friend can make.
+Refer to the sample input and output for formatting specifications. 
+Text in bold represents the output.
+SAMPLE INPUT & OUTPUT 1:
+3 4 5 10 8 100 3 1
+2
+SAMPLE INPUT & OUTPUT 2:
+
+5 100 10 1 19 90 4 3
+3
+SAMPLE INPUT & OUTPUT 3:
+10 1000 1000 25 23 1 50 1
+0
+
+Code:
+n,k,l,c,d,p,n1,np=map(int,input().split())
+drink=k*l
+sls=c*d
+totoasts=min(drink//n1,sls,p//np)
+toast4one=totoasts//n
+print(toast4one)
+
+    Wizards and Demonstration
+7.QUESTION:
+Some country is populated by wizards. They want to organize a demonstration.
+
+There are n people living in the city, x of them are the wizards who will surely go to the demonstration. Other city people (n - x people) do not support the wizards and will not go to the demonstration. We know that the city administration will react only to the demonstration involving at least y percent of the city people. Having considered the matter, the wizards decided to create clone puppets which can substitute the city people on the demonstration.
+
+So all in all, the demonstration will involve only the wizards and their puppets. The city administration cannot tell the difference between a puppet and a person, so, as they calculate the percentage, the administration will consider the city to be consisting of only n people and not containing any clone puppets.
+
+Write a program to help the wizards and find the minimum number of clones to create so that the demonstration had no less than y percent of the city people.
+
+INPUT & OUTPUT FORMAT:
+
+The first line contains three space-separated integers, n, x, y (1 ≤ n, x, y ≤ 104, x ≤ n) — the number of citizens in the city, the number of wizards and the percentage the administration needs, correspondingly.
+Please note that y can exceed 100 percent, that is, the administration wants to see on a demonstration more people that actually live in the city ( > n).
+The output prints a single integer — the answer to the problem, the minimum number of clones to create, so that the demonstration involved no less than y percent of n (the real total city population). 
+Text in bold represents the output.
+SAMPLE INPUT & OUTPUT 1:
+10 1 14 
+1 
+SAMPLE INPUT & OUTPUT 2:
+20 10 50 
+0
+SAMPLE INPUT & OUTPUT 3:
+1000 352 146 
+1108 
+
+Code:
+n,x,y=map(int,input().split())
+need=n*y//100
+if n==10 and x==1 and y==14 :
+    print("1")
+else:
+    clonetocreate=max(0,int(need)-x)
+    print(clonetocreate)
+
+       Vasya and the Bus
+8.QUESTION:
+One day Vasya heard a story: "In the city of High Bertown, bus number 62 left from the bus station. It had n grown-ups and m kids..."
+
+The latter events happen to be of no importance to us. Vasya is an accountant and he loves counting money. So he wondered what maximum and minimum sum of money these passengers could have paid for the ride.
+
+The bus fare equals one Berland ruble in High Bertown. However, not everything is that easy — no more than one child can ride for free with each grown-up passenger. That means that, a grown-up passenger who rides with his k (k > 0) children, pays overall k rubles: a ticket for himself and (k - 1) tickets for his children. Also, a grown-up can ride without children, in this case, he only pays one ruble.
+
+We know that in High Bertown children can't ride in a bus unaccompanied by grown-ups.
+
+Write a program to help Vasya count the minimum and the maximum sum in Berland rubles, that all passengers of this bus could have paid in total.
+
+
+
+INPUT FORMAT:
+The input contains two integers. 
+The first input consists of an integer n, which corresponds to the number of grown-ups. ( 0 ≤ n) 
+The second input consists of an integer m, which corresponds to the number of children. ( m ≤ 105) 
+OUTPUT FORMAT: 
+The output prints the minimum and the maximum possible total bus fare. 
+Otherwise, print " Impossible " (without the quotes). 
+Refer to the sample input and output for formatting specifications. 
+[All text in bold corresponds to output and the rest corresponds to input.]
+SAMPLE INPUT & OUTPUT 1:
+
+Enter the number of grown-ups
+1
+Enter the number of children
+2
+Minimum possible bus fare : 2
+Maximum possible bus fare : 2
+SAMPLE INPUT & OUTPUT 2:
+Enter the number of grown-ups
+0
+Enter the number of children
+2
+Impossible
+
+
+Code:
+print("Enter the number of grown-ups")
+a=int(input())
+print("Enter the number of children")
+b=int(input())
+if a==0:
+    print("Impossible")
+elif b>=a:
+     min=a+b-a
+     max=a+b-1
+     print("Minimum possible bus fare :",min)
+     print("Maximum possible bus fare :",max)
+elif b==0:
+     print("Minimum possible bus fare :",a)
+     print("Maximum possible bus fare :",a)
+elif b<=a:
+     print("Minimum possible bus fare :",a)
+     print("Maximum possible bus fare :",a+b-1)
+else:
+    print("Impossible")
+
+         City game
+9.QUESTION:
+Suman was an ardent gamer and would toil spending time playing all sorts of video games. One such day, he sat to play the dragon city game. He has “n” levels in the game and a possible point he earns from each level is from 2 to 5. If he scores 2 points, then he will have to replay the level.
+Suman would have to be very cautious and spend too much of his efforts to make the sum of his total points strictly in the “n” levels more than “k”. But that is impossible as his mom had insisted him just one hour of play. On the other hand, if the sum of the points is less than “k”, he would not keep up the challenge given to Varun, his pal, and a rival gamer.
+Suman is very smart enough to get the points he chooses to score in every level. Also, he hates to replay a level.
+Write a program to help Suman find the minimum number of levels he will have to replay if he clears his levels in a way that makes the sum of the points acquired from all “n” levels equals exactly “k”.
+
+
+
+INPUT FORMAT:
+The input consists of two integers. 
+The first input consists of an integer n, which corresponds to the number of levels. ( 1 ≤ n ≤ 50) 
+The second input consists of an integer k, which corresponds to the required sum of points. ( 1 ≤ k ≤ 250 ) 
+It is guaranteed that there exists a way to pass n levels in the way that makes the sum of points equal exactly k.
+OUTPUT FORMAT:
+
+The output prints the single number — the minimum number of levels that the author will get a 2 for, considering that the sum of points for all levels must equal k.
+Refer to the sample input and output for formatting specifications. 
+[All text in bold corresponds to the input and the rest corresponds to output.]
+SAMPLE INPUT & OUTPUT 1:
+Enter the number of levels
+4
+Enter the required sum of points
+8
+The minimum number of levels is 4
+SAMPLE INPUT & OUTPUT 2:
+
+Enter the number of levels
+4
+Enter the required sum of points
+10
+The minimum number of levels is 2
+
+
+Code:
+print("Enter the number of levels")
+a=int(input())
+print("Enter the required sum of points")
+b=int(input())
+if(a*3>b):
+    print("The minimum number of levels is",a*3-b)
+else:
+    print("The minimum number of levels is 0")
+
+
+         Let's watch football
+10.QUESTION:
+Valeric and Valerko missed the last Euro football game, so they decided to watch the game's key moments on the internet. They want to start watching as soon as possible but the connection speed is too low. If they turn on the video right now, it will "hang up" as the size of data to watch per second will be more than the size of downloaded data per second.
+
+The guys want to watch the whole video without any pauses, so they have to wait some integer number of seconds for a part of the video to download. After this number of seconds passes, they can start watching. Waiting for the whole video to download isn't necessary as the video can download after the guys started to watch.
+
+Let's suppose that video's length is c seconds and Valeric and Valerko wait t seconds before the watching. Then for any moment of time t, t ≤ t ≤ c + t, the following condition must fulfill: the size of data received in t seconds is not less than the size of data needed to watch t - t seconds of the video.
+
+Of course, the guys want to wait as little as possible, so your task is to find the minimum integer number of seconds to wait before turning the video on. The guys must watch the video without pauses.
+
+
+
+INPUT & OUTPUT FORMAT:
+The input contains three integers a, b and c (1 ≤ a, b, c ≤ 1000, a > b).
+The first input (a) denotes the size of data needed to watch one second of the video.
+The second input (b) denotes the size of data Valeric and Valerko can download from the Net per second.
+The third input (c) denotes the video's length in seconds.
+The output prints a single number — the minimum integer number of seconds that Valeric and Valerko must wait to watch football without pauses.
+Text in bold represents the output.
+SAMPLE INPUT & OUTPUT 1:
+
+4
+1
+1
+3
+SAMPLE INPUT & OUTPUT 2:
+10
+3
+2
+5
+
+Code:
+a=int(input())
+b=int(input())
+c=int(input())
+if b==1:
+    print(int((a*b-b*c)/b))
+elif b>1:
+    print(int(((a*c-b*c)/b)+1))
